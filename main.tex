@@ -1,49 +1,20 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
+% Author : alex-dere
+% Based off of: https://github.com/jakeryang/resume
 % License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+\usepackage{multicol}
 \usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[empty]{fullpage}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-% only for pdflatex
-% \input{glyphtounicode}
-
-% fontawesome
-\usepackage{fontawesome5}
-
-% fixed width
-\usepackage[scale=0.90,lf]{FiraMono}
-
-% light-grey
-\definecolor{light-grey}{gray}{0.83}
-\definecolor{dark-grey}{gray}{0.3}
-\definecolor{text-grey}{gray}{.08}
-
-\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
-\DeclareTextFontCommand{\texteb}{\ebseries}
-
-% custom underilne
-\usepackage{contour}
-\usepackage[normalem]{ulem}
-\renewcommand{\ULdepth}{1.8pt}
-\contourlength{0.8pt}
-\newcommand{\myuline}[1]{%
-  \uline{\phantom{#1}}%
-  \llap{\contour{white}{#1}}%
-}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    }
 
 
 % custom font: helvetica-style
@@ -53,12 +24,6 @@
 \usepackage[T1]{fontenc}
 
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{0in}
@@ -66,68 +31,22 @@
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
-\urlstyle{same}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting - serif
-% \titleformat{\section}{
-%   \vspace{2pt} \scshape \raggedright\large % header section
-% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
-
-% TODO EBSERIES
-% sans serif sections
-\titleformat {\section}{
-    \bfseries \vspace{2pt} \raggedright \large % header section
-}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
-
-% only for pdflatex
-% Ensure that generate pdf is machine readable/ATS parsable
-% \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-1pt}}
-  }
-}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
-      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
-    \end{tabular*}\vspace{-4pt}
+      \textbf{#1} & {\small #2}\\ % top row of resume entry
+    \end{tabular*}\vspace{pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      #1 & {\color{dark-grey}} \\
-    \end{tabular*}\vspace{-4pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-% CHANGED default leftmargin  0.15 in
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
-
-\color{text-grey}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -136,107 +55,93 @@
 \begin{document}
 
 %----------HEADING----------
-\begin{center}
-    \textbf{\Huge Harshibar} \\ \vspace{5pt}
-    \small \faPhone* \texttt{555.555.5555} \hspace{1pt} $|$
-    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{hello@email.com} \hspace{1pt} $|$ 
-    \hspace{1pt} \faYoutube \hspace{2pt} \texttt{harshibar} \hspace{1pt} $|$
-    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{U.S. Citizen}
-    \\ \vspace{-3pt}
-\end{center}
+
+    {\Large Derevyagin Alexander, Product Manager} \\ \vspace{5pt}
+    \href{mailto:aleksandr.dereviagin@gmail.com}{aleksandr.dereviagin@gmail.com} \hspace{1pt} $|$ 
+    github \hspace{1pt} $|$ 
+    Tg: \href{https://t.me/aleks_amber}{@aleks\_amber}  \hspace{1pt} $|$ 
+    \href{https://www.linkedin.com/in/alex-dere/}{www.linkedin.com/in/alex-dere/}
+    \\ \vspace{20pt}
+
 
 %-----------EXPERIENCE-----------
-\section{EXPERIENCE}
-  \resumeSubHeadingListStart
+
+
+  \textbf{Summery}\\
+  I  have been building B2B and B2C SaaS products as a consumer-facing \textbf{Product Manager for over 5 years}, and have 5 years experience in marketing. Most recently, \textbf{I developed and launched a no-code UI builder that helped to generate \$228,571 }for our client and a \textbf{Chatbot Platform generating \$85,714 in revenue}.\\
+ I am a highly organized team-player focused on UX and data-driven approach.
+\vspace{20pt}
+
+\resumeSubheading
+      {Yandex, Senior Product Manager}{2022 -- Present}  
+\\
+      
+      \textcolor{gray}{\textit{Tech company valued at \$17.3B with 25K employees. Operates Russia's largest search engine, rivaling Google}}
+
+Oversaw a SaaS CRM with 8 engineers, from \href{https://miro.com/app/board/uXjVK_QBCw0=/?moveToWidget=3458764591348909874&cot=14}{market research} and \href{https://miro.com/app/board/uXjVK_QBCw0=/?moveToWidget=3458764592116344712&cot=14}{user interviews} to deployment for 3K customers, aiming to boost Weekly Active Users (WAU), retention of CRM and revenue uplift for clients.
+\begin{itemize}[itemsep=-5pt]
+    \item Launched a no-code UI builder to create personal interfaces, resulting in a 9\% increase in WAU.
+    \item Streamlined client transfer processes by rebuilding the data model and UI, generating \$228,571 yearly.
+    \item Transitioned from Waterfall to Scrum, achieving a 30\% boost in task deadline predictability.
+\end{itemize}
+\vspace{20pt}
 
     \resumeSubheading
-      {YouTube}{Aug. 2019 -- Present}
-      {Creator (\href{https://www.youtube.com/c/harshibar}{\myuline {@harshibar}})}{San Francisco, CA}
-      \resumeItemListStart
-        \resumeItem{Grew channel to \textbf{60k subscribers in 1.5 years}; created 80+ videos on tech and productivity}
-        \resumeItem{Conducted A/B testing on titles and thumbnails; \textbf{increased video impressions by 2.5M} in 3 months}
-         \resumeItem{Designed a {\href{https://www.notion.so/harshi/dfab8b6d935a479fa699312174fea8af?v=e64d99d35b8447aab0a749c0c790f3d7}{\myuline {Notion workflow}}} to streamline video production and roadmapping; boosted productivity by 20\%}
-        \resumeItem{\textbf{Partnered with brands like Skillshare and Squarespace} to expand their outreach via sponsorships}
-        \resumeItem{\textbf{Highlights}:
-            \href{https://www.youtube.com/watch?v=HhWUjp5pD0g}{\myuline {The Problem with Productivity Apps}}, \href{https://www.youtube.com/watch?v=ms4cWMsOITs}{\myuline {Obsidian App Review}},
-            \href{https://www.youtube.com/watch?v=PkDbkyIR44w}{\myuline {Not-So-Minimal Desk Setup}}}
-      \resumeItemListEnd
+      {Mail, Product Manager}{2021 -- 2022}  
+\\
+      
+      \textcolor{gray}{\textit{Tech company valued at \$6B with 7K employees. Operates Russia's largest social media platform, rivaling Meta}}
 
-    \resumeSubheading
-      {Freenome (Google Verily)}{Aug. 2018 -- Sept. 2019}
-      {Software Engineer}{San Francisco, CA}
-      \resumeItemListStart
-        \resumeItem{\textbf{Led front-end development} of a dashboard to process 50k blood samples and detect early-stage cancer}
-        \resumeItem{Rebuilt a Quality Control product with input from 20 cross-functional stakeholders, \textbf{saving \$1M annually}}
-        \resumeItem{Spearheaded product development of a new lab workflow tool, leading to a 40\% increase in efficiency; \\ shadowed 10 core users, iterated on design docs, and implemented the solution with one engineer}
+Developed and launched a no-code Chatbot Platform with a team of 30 engineers. Collaborated closely with the design team to optimize UX and UI, thereby increasing Onboarding Speed and chatbot Creation Efficiency.
+\begin{itemize}[itemsep=-5pt]
+    \item Developed a Chatbot Platform which resulted in the sale of 16 chatbots, generating \$85,714 in revenue.
+    \item Increased revenue by \$28,571 through upselling marketing services to existing clients.
+\end{itemize}
+\vspace{20pt}
+ 
+      \resumeSubheading
+      {Social Discovery Group, Product Manager}{2017 -- 2020}  
+\\
+      
+      \textcolor{gray}{\textit{One of the largest dating companies valued at \$28.7M, with 50M+ users and 800 employees}}
 
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Amazon}{May 2017 -- Aug. 2017}
-      {Software Engineering Intern}{Seattle, WA}
-      \resumeItemListStart
-        \resumeItem{Worked on the Search Customer Experience Team; \textbf{received a return offer} for a full-time position}
-        \resumeItem{\textbf{Shipped a new feature to 2M+ users} to improve the search experience for movie series-related queries}
-        \resumeItem{Built a back-end database service in Java and implemented a front-end UI to support future changes}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+ecruited as Head of CRM Marketing in 2017, promoted to Product Manager of CRM in 2019. Led a marketing team with 2 managers and a team of 3 engineers to grow Revenue and LTV.
+\begin{itemize}[itemsep=-5pt]
+    \item Launched a Web-Push channel, resulting in a 5\% revenue growth.
+    \item Integrated a recommendation system into emails, generating \$6,000 in the first week.
+\end{itemize}
+\vspace{20pt}
 
 
-%-----------PROJECTS-----------
+      \resumeSubheading
+      {Previous work experience}{2014 -- 2017}  
+\\ 
 
-\section{PROJECTS}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Hyku Consulting}} {Sept. 2019 -- Mar. 2021}
-          \resumeItemListStart
-            \resumeItem{Mentored 15 students towards acceptance at top US boarding schools; achieved \textbf{100\% success rate}}
-            \resumeItem{Designed a collaborative learning ecosystem for students and parents with Trello, Miro, and Google Suite}
-            \resumeItem{Expanded customer outreach through {\href{https://www.quora.com/profile/Harshibar}{{\myuline{Quora}}}} (1M+ views); reached \textbf{\$25k total revenue} in 2 years}
-          \resumeItemListEnd
-          
-        \resumeProjectHeading
-          {\textbf{Minimal Icon Pack}}{Sept. 2020 -- Nov. 2020}
-          \resumeItemListStart
-            \resumeItem{Designed and released 100+ minimal iOS and Android icons from scratch using Procreate and Figma}
-            \resumeItem{Marketed the product and design process on {\href{https://www.youtube.com/watch?v=Ju32r7QJCzk}{\myuline {YouTube}}}; accumulated over \textbf{\$250 in sales} on {\href{https://gumroad.com/l/icons-by-harshibar}{\myuline {Gumroad}}}}
-          \resumeItemListEnd
-          
-      \resumeProjectHeading
-         {\textbf{CommonIntern}}{Sept. 2019 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Built a Python script to automatically apply to jobs on Glassdoor using BeautifulSoup and Selenium}
-            \resumeItem{\textbf{500 stars on \href{https://github.com/harshibar/common-intern}{\myuline {GitHub}}}; featured on {\href{https://hackaday.com/2020/05/30/job-application-script-automates-the-boring-stuff-with-python}{\myuline {Hackaday}}}; made the front page of {\href {https://www.reddit.com/r/Python/comments/gpaegj/i_was_tired_of_opening_100s_of_tabs_for/?utm_source=share}{\myuline {r/python}}} and {\href {https://www.reddit.com/r/programming/comments/dcmbzx/i_was_tired_of_opening_100s_of_tabs_for/}{\myuline {r/programming}}}}
-          \resumeItemListEnd
-          
-    \resumeSubHeadingListEnd
+\begin{itemize}[itemsep=-5pt]
+    \item Email marketer (project) at United-Traders.eu, 2017
+    \item Email marketer at Spadream, 2016 -- 2017
+    \item Marketing manager at Like BZ, 2015 -- 2016
+    \item SMM manager at Vinigret, 2014 -- 2015
+\end{itemize}
+\vspace{20pt}
 
-
-
-%-----------EDUCATION-----------
-\section {EDUCATION}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Wellesley College}{Aug. 2014 -- May 2018}
-      {Bachelor of Arts in Computer Science and Pre-Med}{Wellesley, MA}
-      	\resumeItemListStart
-    	\resumeItem {\textbf{Coursework}: Data Structures, Algorithms, Databases, Computer Systems, Machine Learning}
-        \resumeItem 
-            {\textbf{Research}: MIT Graybiel Lab (published author), MIT Media Lab (analyzed urban microbe spread)}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
-    \small{\item{
-     \textbf{Languages} {: Python, JavaScript (React.js), HTML/CSS, SQL (PostgreSQL, MySQL)}\vspace{2pt} \\
-     \textbf{Tools}     {: Figma, Notion, Jira, Trello, Miro, Google Analytics, GitHub, DaVinci Resolve, OBS}
-    }}
- \end{itemize}
+\textbf{Skills}
+\begin{multicols}{2}
+\begin{itemize}[itemsep=-5pt]
+    \item SQL, HTML, Postman, BI 
+    \item Figma, Miro, Adobe 
+    \item Google Analytics/Trends 
+    \item Jira, Trello, Slack 
+    \item Salesforce, Asana 
+\end{itemize}
+\begin{itemize}[itemsep=-5pt]
+    \item Market/Competitor research
+    \item Data Analysis, Strategic planning, A/B
+    \item UX, UI, CJM
+    \item Leadership, negotiation
+    \item Agile, SCRUM, Kanban
+\end{itemize}
+\end{multicols}
 
 
 %-------------------------------------------
